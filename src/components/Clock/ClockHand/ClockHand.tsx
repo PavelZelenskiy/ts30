@@ -5,7 +5,20 @@ type timeType = {
   timeType: string;
 };
 
-export function ClockHand({ timeType }: timeType) {
+type HandStyle = {
+  width: string;
+  height: string;
+  background: string;
+  position: any;
+  top: string;
+  left: string;
+  transformOrigin: string;
+  transition: string;
+  transitionTimingFunction: string;
+  transform: string;
+};
+
+export const ClockHand = ({ timeType }: timeType) => {
   const [time, setTime] = useState(0);
 
   let handHeight: string;
@@ -47,19 +60,6 @@ export function ClockHand({ timeType }: timeType) {
 
   setInterval(() => updateTime(timeType), 1000);
 
-  type HandStyle = {
-    width: string;
-    height: string;
-    background: string;
-    position: any;
-    top: string;
-    left: string;
-    transformOrigin: string;
-    transition: string;
-    transitionTimingFunction: string;
-    transform: string;
-  };
-
   const handStyle: HandStyle = {
     width: handWidth,
     height: handHeight,
@@ -73,9 +73,5 @@ export function ClockHand({ timeType }: timeType) {
     transform: `rotate(${time}deg)`,
   };
 
-  return (
-    <>
-      <div style={handStyle}></div>
-    </>
-  );
-}
+  return <div style={handStyle}></div>;
+};

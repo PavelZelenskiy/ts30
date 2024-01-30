@@ -2,7 +2,7 @@ import React from "react";
 import "./tsClock.css";
 import { ClockHand } from "./ClockHand/ClockHand";
 
-export function TsClock() {
+export const TsClock = () => {
   return (
     <div className="ts_clock">
       <div className="clock_face">
@@ -14,4 +14,4 @@ export function TsClock() {
       </div>
     </div>
   );
-}
+};
