@@ -6,68 +6,86 @@ import Snare from "./Sounds/Snare.wav";
 import TomTomHi from "./Sounds/Tom-tom hi.wav";
 import TomTomLow from "./Sounds/Tom-tom low.wav";
 
-export const soundButtons = [
+type SoundButton = {
+  keyboard: {
+    letter: string;
+    code: number;
+  };
+  sound: {
+    name: string;
+    source: any;
+  };
+};
+
+export const soundButtons: SoundButton[] = [
   {
-    id: 1,
-    keyboardLetter: "A",
-    keyboradLetterCode: 65,
+    keyboard: {
+      letter: "A",
+      code: 65,
+    },
     sound: {
-      soundName: "Bass",
-      soundSource: Bass,
+      name: "Bass",
+      source: Bass,
     },
   },
   {
-    id: 2,
-    keyboardLetter: "S",
-    keyboradLetterCode: 83,
+    keyboard: {
+      letter: "S",
+      code: 83,
+    },
     sound: {
-      soundName: "Crash",
-      soundSource: Crash,
+      name: "Crash",
+      source: Crash,
     },
   },
   {
-    id: 3,
-    keyboardLetter: "D",
-    keyboradLetterCode: 68,
+    keyboard: {
+      letter: "D",
+      code: 68,
+    },
     sound: {
-      soundName: "Hi-hat",
-      soundSource: Hihat,
+      name: "Hi-hat",
+      source: Hihat,
     },
   },
   {
-    id: 4,
-    keyboardLetter: "F",
-    keyboradLetterCode: 70,
+    keyboard: {
+      letter: "F",
+      code: 70,
+    },
     sound: {
-      soundName: "Ride",
-      soundSource: Ride,
+      name: "Ride",
+      source: Ride,
     },
   },
   {
-    id: 5,
-    keyboardLetter: "G",
-    keyboradLetterCode: 71,
+    keyboard: {
+      letter: "G",
+      code: 71,
+    },
     sound: {
-      soundName: "Snare",
-      soundSource: Snare,
+      name: "Snare",
+      source: Snare,
     },
   },
   {
-    id: 6,
-    keyboardLetter: "H",
-    keyboradLetterCode: 72,
+    keyboard: {
+      letter: "H",
+      code: 72,
+    },
     sound: {
-      soundName: "Tom Hi ",
-      soundSource: TomTomHi,
+      name: "Tom Hi ",
+      source: TomTomHi,
     },
   },
   {
-    id: 7,
-    keyboardLetter: "J",
-    keyboradLetterCode: 74,
+    keyboard: {
+      letter: "J",
+      code: 74,
+    },
     sound: {
-      soundName: "Tom Low",
-      soundSource: TomTomLow,
+      name: "Tom Low",
+      source: TomTomLow,
     },
   },
 ];

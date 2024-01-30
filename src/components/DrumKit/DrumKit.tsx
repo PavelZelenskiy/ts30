@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./drumKit.css";
-import { SoundButton } from "./components/SoundButton/SoundButton";
+import { SoundButton } from "./SoundButton/SoundButton";
 import { soundButtons } from "./data/soundButtons";
 
-export function DrumKit() {
+export const DrumKit = () => {
   const [isActive, setActive] = useState(false);
-  const [keyCode, setKeyCode] = useState(0);
+  const [keyCode, setKeyCode] = useState(NaN);
 
   return (
     <div
@@ -22,10 +22,10 @@ export function DrumKit() {
       {soundButtons.map((button) => (
         <SoundButton
           {...button}
-          key={button.id}
-          isActive={button.keyboradLetterCode === keyCode ? isActive : false}
+          key={button.keyboard.code}
+          isActive={button.keyboard.code === keyCode ? isActive : false}
         />
       ))}
     </div>
   );
-}
+};
