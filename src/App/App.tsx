@@ -4,6 +4,7 @@ import { TsClock } from "../components/Clock/TsClock";
 import { Route, Routes } from "react-router-dom";
 import { ProjectsPanel } from "../components/ProjectsPanel/ProjectsPanel";
 import { NotFoundPage } from "../components/NotFoundPage/NotFoundPage";
+import { VariablesCSS } from "../components/VariablesCSS/VariablesCSS";
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <Route path="/tsdrumkit" element={<DrumKit />} />
       <Route path="/tsclock" element={<TsClock />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/tsvariablescss" element={<VariablesCSS />} />
     </Routes>
   );
 };

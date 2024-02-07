@@ -4,8 +4,8 @@ import { SoundButton } from "./SoundButton/SoundButton";
 import { soundButtons } from "./data/soundButtons";
 
 export const DrumKit = () => {
-  const [isActive, setActive] = useState(false);
-  const [keyCode, setKeyCode] = useState(NaN);
+  const [isActive, setActive] = useState<boolean>(false);
+  const [keyCode, setKeyCode] = useState<number | null>(null);
 
   return (
     <div

@@ -19,7 +19,7 @@ type HandStyle = {
 };
 
 export const ClockHand = ({ timeType }: timeType) => {
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState<number>(0);
 
   let handHeight: string;
   let handWidth: string;
