@@ -8,6 +8,7 @@ export const ProjectsPanel = () => {
       <Link to="/tsdrumkit">Drum Kit</Link>
       <Link to="/tsclock">Clock</Link>
       <Link to="/tsvariablescss">Variables CSS</Link>
+      <Link to="/tsarraymethods">Array methods</Link>
     </div>
   );
 };

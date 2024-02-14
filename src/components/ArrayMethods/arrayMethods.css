@@ -1,0 +1,19 @@
+.array_methods{
+    display: flex;
+    background: gray;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    margin: 50px;
+    cursor: default;
+}
+tr{
+    text-align: left;
+}
+th{
+    margin-bottom: 10px;
+}
